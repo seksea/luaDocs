@@ -18,7 +18,7 @@ Output: `localPlayer's health: 100`
 *Same as GetNetvarInt(), just with a float*
 
 ### ClassID()
-*Return's the entities' ClassID, e.g 35 for players*
+*Return's the entities' ClassID, e.g 40 for players*
 
 Example:
 ```lua
@@ -28,7 +28,7 @@ if localPlayer:Exists() then
         print("localPlayer's classid: " .. localPlayer:ClassID())
 end
 ```
-Output: `localPlayer's classid: 35`
+Output: `localPlayer's classid: 40`
 
 ### NetworkName()
 *Return's the entities' network name e.g `TODO:add players' networkname` for players*
