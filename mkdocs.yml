@@ -1,0 +1,4 @@
+site_name: Lua documentation
+
+theme:
+  name: material
