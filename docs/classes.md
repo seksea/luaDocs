@@ -63,7 +63,7 @@ Example:
 -- Get localPlayer
 local localPlayer = Interfaces.EntityList.GetClientEntity(Interfaces.Engine.GetLocalPlayer())
 if localPlayer:Exists() then
-        print("is localPlayer an enemy? (will obviously return false): " .. localPlayer:Enemy())
+        print("is localPlayer an enemy? (will obviously return false): " .. tostring(localPlayer:Enemy()))
 end
 ```
 Output: `is localPlayer an enemy? (will obviously return false): false`
