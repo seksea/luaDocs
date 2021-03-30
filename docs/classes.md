@@ -31,7 +31,7 @@ end
 Output: `localPlayer's classid: 40`
 
 ### NetworkName()
-*Return's the entities' network name e.g `TODO:add players' networkname` for players*
+*Return's the entities' network name e.g `CCSPlayer` for players*
 
 Example:
 ```lua
@@ -41,7 +41,7 @@ if localPlayer:Exists() then
         print("localPlayer's network name: " .. localPlayer:NetworkName())
 end
 ```
-Output: `localPlayer's network name: TODO: get player's networkname`
+Output: `localPlayer's network name: CCSPlayer`
 
 ### Exists()
 *Checks the entity exists, checking for this should be done before doing anything else involving the ent*
