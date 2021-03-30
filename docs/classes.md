@@ -92,7 +92,8 @@ Example:
 -- Simple ChickenESP using GetBox
 function onDraw()
 	if Interfaces.Engine.IsInGame() then
-		for k, chickenEntity in pairs(Utils.GetEntitiesByClassID(36)) do
+		for k, chickenIndex in pairs(Utils.GetEntitiesByClassID(36)) do
+			local chickenEntity = Interfaces.EntityList.GetClientEntity(chickenIndex)
 			if chickenEntity:Exists() then
 				local box = chickenEntity:GetBox()
 				Draw.CenteredOutlinedText(Vec2(box.x + ((box.z-box.x)//2), box.y - 14), Color(255, 255, 255, 255), Color(0, 0, 0, 255), "Chicken")
