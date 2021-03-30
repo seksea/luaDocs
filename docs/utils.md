@@ -9,15 +9,16 @@ Example:
 ```lua
 -- Simple ChickenESP using GetEntitiesByClassID
 function onDraw()
-        if Interfaces.Engine.IsInGame() then
-                for k, chickenEntity in pairs(Utils.GetEntitiesByClassID(36)) do
-                        if chickenEntity:Exists() then
-                                local box = chickenEntity:GetBox()
-                                Draw.CenteredOutlinedText(Vec2(box.x + ((box.z-box.x)//2), box.y - 14), Color(255, 255, 255, 255), Color(0, 0, 0, 255), "Chicken")
-                                Draw.OutlinedRect(Vec2(box.x, box.y), Vec2(box.z, box.w), Color(255, 255, 255, 255), Color(0, 0, 0, 255), 1)
-                        end
-                end
-        end
+	if Interfaces.Engine.IsInGame() then
+		for k, chickenIndex in pairs(Utils.GetEntitiesByClassID(36)) do
+			local chickenEntity = Interfaces.EntityList.GetClientEntity(chickenIndex)
+			if chickenEntity:Exists() then
+				local box = chickenEntity:GetBox()
+				Draw.CenteredOutlinedText(Vec2(box.x + ((box.z-box.x)//2), box.y - 14), Color(255, 255, 255, 255), Color(0, 0, 0, 255), "Chicken")
+				Draw.OutlinedRect(Vec2(box.x, box.y), Vec2(box.z, box.w), Color(255, 255, 255, 255), Color(0, 0, 0, 255), 1)
+			end
+		end
+	end
 end
 
 RegisterHook("Draw", "onDraw")
@@ -32,15 +33,16 @@ Example:
 ```lua
 -- Simple ChickenESP using WorldToScreen
 function onDraw()
-        if Interfaces.Engine.IsInGame() then
-                for k, chickenEntity in pairs(Utils.GetEntitiesByClassID(36)) do
-                        if chickenEntity:Exists() then
-                                local origin = chickenEntity:Origin()
+	if Interfaces.Engine.IsInGame() then
+		for k, chickenIndex in pairs(Utils.GetEntitiesByClassID(36)) do
+			local chickenEntity = Interfaces.EntityList.GetClientEntity(chickenIndex)
+			if chickenEntity:Exists() then
+				local origin = chickenEntity:Origin()
 				local originOnScreen = Math.WorldToScreen(origin)
-                                Draw.CenteredOutlinedText(Vec2(originOnScreen.x, originOnScreen.y), Color(255, 255, 255, 255), Color(0, 0, 0, 255), "Chicken")
-                        end
-                end
-        end
+				Draw.CenteredOutlinedText(Vec2(originOnScreen.x, originOnScreen.y), Color(255, 255, 255, 255), Color(0, 0, 0, 255), "Chicken")
+			end
+		end
+	end
 end
 
 RegisterHook("Draw", "onDraw")
