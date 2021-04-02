@@ -14,8 +14,14 @@ end
 ```
 Output: `localPlayer's health: 100`
 
+### SetNetvarInt()
+*Sets value of a netvar int*
+
 ### GetNetvarFloat()
 *Same as GetNetvarInt(), just with a float*
+
+### SetNetvarFloat()
+*Same as SetNetvarInt(), just with a float*
 
 ### ClassID()
 *Return's the entities' ClassID, e.g 40 for players*

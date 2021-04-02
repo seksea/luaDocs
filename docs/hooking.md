@@ -15,8 +15,13 @@ function onFSN(frame)
 	end
 end
 
+function onUI()
+	UI.AddCheckbox("Test Checkbox", "test checkbox var")
+end
+
 RegisterHook("Draw", "onDraw")
 RegisterHook("FrameStageNotify", "onFSN")
+RegisterHook("UI", "onUI")
 ```
 
 ## Hooks
@@ -38,3 +43,6 @@ RegisterHook("FrameStageNotify", "onFSN")
 | 4     | NET_UPDATE_END                  |
 | 5     | RENDER_START                    |
 | 6     | RENDER_END                      |
+
+### UI
+*Is ran for custom menu items in your lua scripts, look in Utils->UI and the simpleESP example for more*

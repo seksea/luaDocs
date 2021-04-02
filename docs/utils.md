@@ -48,6 +48,19 @@ end
 RegisterHook("Draw", "onDraw")
 ```
 
+## UI
+*Everything beginning with "Add" should be done in a UI hook*
+* `UI.AddCheckbox(string label, string configItemName)` (Config item is a configbool, so got with GetConfigBool)
+* `UI.AddSliderInt(string label, string configItemName, int min, int max)` (Config item is a configint, so got with GetConfigInt)
+* `UI.AddColorPicker(string label, string configItemName)` (Config item is a configcolor, so got with GetConfigColor)
+
+* `UI.GetConfigBool(string configItemName)`
+* `UI.SetConfigBool(string configItemName, bool value)`
+* `UI.GetConfigInt(string configItemName)`
+* `UI.SetConfigInt(string configItemName, int value)`
+* `UI.GetConfigColor(string configItemName)`
+* `UI.SetConfigColor(string configItemName, Color value)`
+
 ## Draw
 *Everything in this section should be done in a draw hook*
 
